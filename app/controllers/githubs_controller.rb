@@ -5,7 +5,6 @@ class GithubsController < ApplicationController
   def index
     url = open("https://github.com/trending")
     doc = Nokogiri::HTML.parse(url, nil, "UTF-8")
-    puts doc.xpath('//h1').css('a')
     @contents = doc.xpath('//h1').css('a')
     @stars = doc.xpath('//span[@class="d-inline-block float-sm-right"]')
   end
@@ -23,7 +22,8 @@ class GithubsController < ApplicationController
     url = "https://github.com/trending/developers"
     doc = Nokogiri::HTML(open(url))
     @contents = doc.xpath('//h1').css('a')
-    @images = doc.xpath('//img[@class="avatar mb-1"]')
+    images = parse_html.css('img')
+    puts parse_html.css('img')
   end
 
 end
