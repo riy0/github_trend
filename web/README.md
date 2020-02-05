@@ -1,7 +1,7 @@
 <h1 align="center">Github Trend</h1>
 
 ## description
-Githubのトレンドを確認
+Githubのトレンドをnokogiriを用いて取得
 
 <a href="LICENSE">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT">
